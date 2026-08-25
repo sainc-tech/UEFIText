@@ -29,4 +29,3 @@ U CAN LOOK AT THE CODE ALSO!!!!!! so theres no issue ;D
 ## Build is
 ´´´bash
 build -p UEFITextPkg/UEFITextPkg.dsc -a X64 -t GCC
-´´´
