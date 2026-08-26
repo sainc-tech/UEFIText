@@ -1,5 +1,7 @@
 # Welcome to UEFIText! :D
 
+## This is my UEFIText program It is built in obviously UEFI C and its built via EDK2 on LMDE! It has a taskbar, start menu, programs that u will use AND it took me around 1 week for making this!! ._. THAT IN ITSELF IS INSANE i used chatgpts WEAKEST model (or done in free plan) and i managed to build an os like EFI app! its cool if u want to see LOOK AT THE CODE DO CHANGE!
+
 This is my project that i was working on it has useful apps and it looks like an os! it took me around 1 week for making this!! 
 [![YouTube](https://img.shields.io/badge/YouTube-SA.inc-red?logo=youtube)](https://youtube.com/@sainccool123)
 
