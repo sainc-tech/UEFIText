@@ -1011,8 +1011,8 @@ VOID ShowShutdownSequence(BOOLEAN IsReboot) {
     INT32 CenterY = (INT32)gScreenHeight / 2;
 
     DrawRect(0,0,gScreenWidth,gScreenHeight,RGB(15,23,42));
-    DrawString(L"Shutting down UEFI System...",CenterX-112,CenterY-10,COLOR_TEXT);
-    DrawString(L"Saving filesystem states and closing protocols...",CenterX-192,CenterY+10,RGB(148,163,184));
+    DrawString(L"Shutting down...",CenterX-112,CenterY-10,COLOR_TEXT);
+    DrawString(L"Doing stuff to close and power off!",CenterX-192,CenterY+10,RGB(148,163,184));
     SwapBuffers();
     gBS->Stall(1200000);
 
@@ -1369,7 +1369,14 @@ VOID DrawWindowTitleBar(UEFI_WINDOW *Win) {
     INT32 MinX=MaxX-BtnW;
 
     DrawButton(MinX,Win->Y,BtnW,TitleH,L"-",COLOR_TOOLBAR_BG,COLOR_TEXT);
-    DrawButton(MaxX,Win->Y,BtnW,TitleH,L"O",COLOR_TOOLBAR_BG,COLOR_TEXT);
+    DrawButton(MaxX, Win->Y, BtnW, TitleH, L"", COLOR_TOOLBAR_BG, COLOR_TEXT);
+    DrawRect(
+        MaxX + (BtnW - 6) / 2,
+        Win->Y + (TitleH - 6) / 2,
+        6,
+        6,
+        COLOR_TEXT
+    );
     DrawButton(CloseX,Win->Y,BtnW,TitleH,L"X",COLOR_BTN_CLOSE,COLOR_TEXT);
 }
 
@@ -1510,7 +1517,7 @@ VOID RenderSnake(UEFI_WINDOW *Win) {
     }
 
     if (gSnakeGameOver)
-        DrawString(L"GAME OVER! Press Reset",BoardX+10,BoardY+80,RGB(239,68,68));
+        DrawString(L"GAME OVER! Press Reset",BoardX+10,BoardY+80,RGB(255,75,70));
 
     DrawButton(CanvasX,BoardY+(SNAKE_GRID_H*SNAKE_CELL_SZ)+10,80,22,L"Reset",COLOR_TITLE_ACTIVE,COLOR_TEXT);
     DrawString(L"Controls: Arrow Keys",CanvasX+90,BoardY+(SNAKE_GRID_H*SNAKE_CELL_SZ)+16,COLOR_TEXT);
@@ -1583,8 +1590,8 @@ VOID RenderDiskUtil(UEFI_WINDOW *Win) {
     DrawWindowTitleBar(Win);
     INT32 CanvasX=Win->X+12,CanvasY=Win->Y+34;
 
-    DrawString(L"EFI Storage & Disk Management",CanvasX,CanvasY,COLOR_TEXT);
-    DrawString(L"-----------------------------------",CanvasX,CanvasY+12,COLOR_WIN_BORDER);
+    DrawString(L"Disks tho so good luck :D",CanvasX,CanvasY,COLOR_TEXT);
+    DrawString(L"-------------------------",CanvasX,CanvasY+12,COLOR_WIN_BORDER);
 
     UINTN HandleCount=0;
     EFI_HANDLE *HandleBuffer=NULL;
@@ -2197,7 +2204,7 @@ VOID RenderFileManager(UEFI_WINDOW *Win) {
     );
 
     DrawString(
-        L"Files on EFI Volume:",
+        L"Files on Booted disk:",
         CanvasX + 10,
         CanvasY + 10,
         COLOR_TEXT
@@ -7052,7 +7059,7 @@ VOID RenderTaskbarAndStartMenu(VOID) {
         );
 
         DrawString(
-            L"Power Options",
+            L"Power popup",
             DiaX + 10,
             DiaY + 6,
             COLOR_TEXT
