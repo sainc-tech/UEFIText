@@ -1,7 +1,7 @@
 # Welcome to UEFIText! :D
 
 This is my project that i was working on it has useful apps and it looks like an os! it took me around 1 week for making this!! 
-[![Youtube](youtube-logo.png)](https://youtube.com/@sainccool123)
+[![YouTube](https://img.shields.io/badge/YouTube-SA.inc-red?logo=youtube)](https://youtube.com/@sainccool123)
 
 heres an app list:
 
