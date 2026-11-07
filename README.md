@@ -25,10 +25,18 @@ heres an app list:
 14. **File Archiver! :D** which doesnt work ._.
 15. **os desktop**
 
+
 ### And more! bc i dont want a full list ._.
 
 U CAN LOOK AT THE CODE ALSO!!!!!! so theres no issue ;D
 
+### EDK2 setup
+U do need to set it up yourself ._. sry...
+
 ## Build is
 ```bash
-build -p UEFITextPkg/UEFITextPkg.dsc -a X64 -t GCC
+rm -rf ~/edk2/Build/UEFIText && cd ~/edk2 && source edksetup.sh I do edk2 at home dir thats why it has the tilde ~ symbol!
+build -p UEFITextPkg/UEFITextPkg.dsc -a X64 -t GCC -b DEBUG -c
+```
+
+MEOW! bye!
