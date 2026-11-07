@@ -35,8 +35,8 @@ U do need to set it up yourself ._. sry...
 
 ## Build is
 ```bash
-rm -rf ~/edk2/Build/UEFIText && cd ~/edk2 && source edksetup.sh I do edk2 at home dir thats why it has the tilde ~ symbol!
-build -p UEFITextPkg/UEFITextPkg.dsc -a X64 -t GCC -b DEBUG -c
+rm -rf ~/edk2/Build/UEFIText && cd ~/edk2 && source edksetup.sh # I do edk2 at home dir thats why it has the tilde ~ symbol!
+build -p UEFITextPkg/UEFITextPkg.dsc -a X64 -t GCC -b DEBUG -c # or RELEASE if u want to.
 ```
 
 MEOW! bye!
